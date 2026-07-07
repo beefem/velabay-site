@@ -76,6 +76,11 @@ h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(1.6rem,3
 .card{background:var(--panel);border:1px solid rgba(242,182,78,.14);border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 42px rgba(229,48,143,.16)}
 .card img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.card-media{position:relative}
+.play-btn{position:absolute;bottom:14px;right:14px;width:54px;height:54px;border-radius:50%;border:1px solid rgba(242,182,78,.55);background:rgba(20,8,32,.62);backdrop-filter:blur(6px);color:var(--gold-light);font-size:1.05rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,background .2s;z-index:2}
+.play-btn:hover{transform:scale(1.08);background:rgba(229,48,143,.5)}
+.play-btn.playing{background:var(--gold);color:#2a1505;border-color:var(--gold)}
+.preview-note{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);position:absolute;bottom:22px;left:16px;text-shadow:0 1px 8px rgba(0,0,0,.7);opacity:.85}
 .card-body{padding:20px 22px 24px}
 .card h3{font-family:'Playfair Display',serif;font-size:1.25rem;letter-spacing:.05em;margin-bottom:2px}
 .card .date{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
@@ -140,7 +145,11 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
     <div class="sec-head"><h2 data-i18n="music_h">Muzyka</h2></div>
     <div class="cards">
       <div class="card">
-        <img src="assets/cover_noc_800.jpg" alt="Noc na jachcie — okładka singla Vela Bay" loading="lazy">
+        <div class="card-media">
+          <img src="assets/cover_noc_800.jpg" alt="Noc na jachcie — okładka singla Vela Bay" loading="lazy">
+          <span class="preview-note" data-i18n="preview_note">Zajawka 25 s</span>
+          <button class="play-btn" data-src="assets/preview_noc.mp3" aria-label="Posłuchaj zajawki: Noc na jachcie">▶</button>
+        </div>
         <div class="card-body">
           <div class="date" data-i18n="s1_date">Premiera 24.07.2026</div>
           <h3>Noc na jachcie</h3>
@@ -149,7 +158,11 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
         </div>
       </div>
       <div class="card">
-        <img src="assets/cover_yacht_800.jpg" alt="Yacht Nights — single cover, Vela Bay" loading="lazy">
+        <div class="card-media">
+          <img src="assets/cover_yacht_800.jpg" alt="Yacht Nights — single cover, Vela Bay" loading="lazy">
+          <span class="preview-note" data-i18n="preview_note">Zajawka 25 s</span>
+          <button class="play-btn" data-src="assets/preview_yacht.mp3" aria-label="Posłuchaj zajawki: Yacht Nights">▶</button>
+        </div>
         <div class="card-body">
           <div class="date" data-i18n="s2_date">Premiera 31.07.2026</div>
           <h3>Yacht Nights</h3>
@@ -158,7 +171,11 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
         </div>
       </div>
       <div class="card coming">
-        <div class="card-cover"><div class="qm">III</div></div>
+        <div class="card-media">
+          <div class="card-cover"><div class="qm">III</div></div>
+          <span class="preview-note" data-i18n="preview_note3">Pierwsza zajawka 20 s</span>
+          <button class="play-btn" data-src="assets/preview_krolowa.mp3" aria-label="Posłuchaj pierwszej zajawki singla #3">▶</button>
+        </div>
         <div class="card-body">
           <div class="date" data-i18n="s3_date">Sierpień 2026</div>
           <h3 data-i18n="s3_title">Singiel #3</h3>
@@ -229,6 +246,7 @@ const T = {
     s1_date:"Out 24 July 2026", s1_desc:"Debut single (Polish). Night, deck and a groove that doesn't ask permission.", s1_badge:"Soon on Spotify · Apple Music · YouTube",
     s2_date:"Out 31 July 2026", s2_desc:"The English twin of a night on deck — Balearic saxophones on the open sea.", s2_badge:"Soon on Spotify · Apple Music · YouTube",
     s3_date:"August 2026", s3_title:"Single #3", s3_desc:"The queen is stepping on deck. The whole yacht knows.", s3_badge:"In production",
+    preview_note:"25s preview", preview_note3:"First 20s teaser",
     about_h:"About",
     about_p1:"Vela Bay is sunny funky house from the golden era of beach clubs: female vocals, Balearic saxophones, slap bass and a four-on-the-floor pulse. Music for sailing days, beach parties and nights that refuse to end.",
     about_p2:"Every single ships in two versions: the radio edit — and a club version made for DJs playing dancefloors from the Baltic to Ibiza.",
@@ -247,6 +265,7 @@ const T = {
     s1_date:"Premiera 24.07.2026", s1_desc:"Debiutancki singiel. Noc, pokład i groove, który nie pyta o zgodę.", s1_badge:"Wkrótce na Spotify · Apple Music · YouTube",
     s2_date:"Premiera 31.07.2026", s2_desc:"Anglojęzyczny bliźniak nocy na pokładzie — balearskie saksofony na pełnym morzu.", s2_badge:"Wkrótce na Spotify · Apple Music · YouTube",
     s3_date:"Sierpień 2026", s3_title:"Singiel #3", s3_desc:"Królowa już wchodzi na pokład. Cały jacht to wie.", s3_badge:"W produkcji",
+    preview_note:"Zajawka 25 s", preview_note3:"Pierwsza zajawka 20 s",
     about_h:"O projekcie",
     about_p1:"Vela Bay to słoneczny funky house w duchu złotej ery beach clubów: kobiecy wokal, balearskie saksofony, slap bass i cztery na cztery. Muzyka na rejs, plażę i noce, które nie chcą się kończyć.",
     about_p2:"Każdy singiel ukazuje się w dwóch wersjach: radiowej — i klubowej, z myślą o DJ-ach, którzy grają na parkietach od Bałtyku po Ibizę.",
@@ -270,6 +289,21 @@ function setLang(l){
   if(!l) l = (navigator.language||'pl').toLowerCase().startsWith('pl') ? 'pl' : 'en';
   if(l !== 'pl') setLang(l);
 })();
+
+/* audio previews */
+const vbAudio = new Audio();
+let vbBtn = null;
+function resetBtn(){ if(vbBtn){ vbBtn.textContent='▶'; vbBtn.classList.remove('playing'); vbBtn=null; } }
+vbAudio.addEventListener('ended', resetBtn);
+document.querySelectorAll('.play-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    if(vbBtn===btn && !vbAudio.paused){ vbAudio.pause(); resetBtn(); return; }
+    resetBtn();
+    vbAudio.src = btn.dataset.src;
+    vbAudio.play();
+    vbBtn = btn; btn.textContent='❚❚'; btn.classList.add('playing');
+  });
+});
 </script>
 </body>
 </html>
