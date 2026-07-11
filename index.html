@@ -306,5 +306,19 @@ document.querySelectorAll('.play-btn').forEach(btn=>{
 });
 </script>
 <script data-goatcounter="https://velabay.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  function gc(name, title){ if(window.goatcounter&&goatcounter.count) goatcounter.count({path:name, title:title, event:true}); }
+  var sent={};
+  document.querySelectorAll('.play-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var src=(b.getAttribute('data-src')||'');
+      var m=src.match(/preview_(\w+)\.mp3/);
+      var key=m?m[1]:'unknown';
+      if(!sent[key]){ sent[key]=1; gc('play-preview-'+key, 'Play preview: '+key); }
+    });
+  });
+})();
+</script>
 </body>
 </html>

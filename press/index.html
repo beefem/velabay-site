@@ -102,5 +102,20 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:26px 0 38px;font-size:.
 <footer>© 2026 Vela Bay · velabay.pl · strona prasowa — prosimy nie udostępniać linków do plików przed premierą 24.07.2026</footer>
 
 <script data-goatcounter="https://velabay.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  function gc(name, title){ if(window.goatcounter&&goatcounter.count) goatcounter.count({path:name, title:title, event:true}); }
+  document.querySelectorAll('audio').forEach(function(a){
+    var sent=false;
+    a.addEventListener('play', function(){ if(!sent){sent=true; gc('play-press-radio-edit','Play: Radio Edit (press)');} });
+  });
+  document.querySelectorAll('a[download]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var f=(a.getAttribute('href')||'').split('.').pop().toLowerCase();
+      gc('dl-press-'+f, 'Download press: '+f.toUpperCase());
+    });
+  });
+})();
+</script>
 </body>
 </html>
