@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vela Bay Music — sunny funky house prosto z pokładu</title>
-<meta name="description" content="Vela Bay Music — słoneczny funky house: kobiecy wokal, balearskie saksofony, slap bass. Debiutancki singiel „Noc na jachcie” 24.07.2026, „Yacht Nights” 31.07.2026.">
+<meta name="description" content="Vela Bay Music — słoneczny funky house: kobiecy wokal, balearskie saksofony, slap bass. Debiut „Noc na jachcie” już gra na Spotify, Apple Music i YouTube. „Yacht Nights” — premiera 31.07.2026.">
 <meta name="keywords" content="Vela Bay, Vela Bay Music, funky house, disco house, yacht music, balearic, Noc na jachcie, Yacht Nights">
 <link rel="canonical" href="https://velabay.pl/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vela Bay Music">
 <meta property="og:title" content="Vela Bay Music — sunny funky house prosto z pokładu">
-<meta property="og:description" content="Kobiecy wokal, balearskie saksofony, slap bass i cztery na cztery. Debiut „Noc na jachcie” 24.07 · „Yacht Nights” 31.07.">
+<meta property="og:description" content="Kobiecy wokal, balearskie saksofony, slap bass i cztery na cztery. „Noc na jachcie” już gra · „Yacht Nights” — premiera 31.07.">
 <meta property="og:image" content="https://velabay.pl/assets/og_1200x630.jpg">
 <meta property="og:url" content="https://velabay.pl/">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MusicGroup","name":"Vela Bay","alternateName":"Vela Bay Music","url":"https://velabay.pl","image":"https://velabay.pl/assets/og_1200x630.jpg","genre":["Funky House","Disco House"],"foundingLocation":{"@type":"Place","name":"Warsaw, Poland"},"sameAs":["https://www.youtube.com/@velabaymusic","https://www.instagram.com/velabay.music/","https://www.tiktok.com/@velabay.music","https://x.com/velabaymusic","https://soundcloud.com/velabaymusic","https://velabay.bandcamp.com","https://www.threads.net/@velabay.music","https://www.pinterest.com/velabaymusic/"]}
+{"@context":"https://schema.org","@type":"MusicGroup","name":"Vela Bay","alternateName":"Vela Bay Music","url":"https://velabay.pl","image":"https://velabay.pl/assets/og_1200x630.jpg","genre":["Funky House","Disco House"],"foundingLocation":{"@type":"Place","name":"Warsaw, Poland"},"sameAs":["https://open.spotify.com/artist/2Oolpac5pOXLB8v5lnXJ5j","https://www.youtube.com/@velabaymusic","https://www.instagram.com/velabay.music/","https://www.tiktok.com/@velabay.music","https://x.com/velabaymusic","https://soundcloud.com/velabaymusic","https://velabay.bandcamp.com","https://www.threads.net/@velabay.music","https://www.pinterest.com/velabaymusic/"],"track":[{"@type":"MusicRecording","name":"Noc na jachcie","duration":"PT2M40S","isrcCode":"QT6EW2643401","datePublished":"2026-07-24","url":"https://open.spotify.com/track/76WY1DVakyAqFagG13N4W4","inLanguage":"pl"},{"@type":"MusicRecording","name":"Yacht Nights","duration":"PT2M56S","isrcCode":"QT6EW2643463","datePublished":"2026-07-31","inLanguage":"en"}]}
 </script>
 <style>
 :root{
@@ -86,6 +86,15 @@ h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(1.6rem,3
 .card .date{font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
 .card p{font-size:.9rem;color:var(--ink-dim);margin:10px 0 16px}
 .badge{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:99px;border:1px solid var(--line);color:var(--gold-light)}
+.badge.live{border-color:var(--gold);background:rgba(242,182,78,.14);color:var(--gold)}
+/* linki do platform w karcie singla (po premierze) */
+.card-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.card-links a{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;letter-spacing:.06em;padding:7px 14px;border-radius:99px;border:1px solid var(--line);color:var(--ink);transition:border-color .15s,transform .15s,background .15s}
+.card-links a:hover{transform:translateY(-1px);border-color:var(--gold);background:rgba(242,182,78,.12)}
+.card-links a.primary{background:linear-gradient(120deg,var(--gold),var(--coral) 130%);color:#2a1505;border-color:transparent}
+/* teledysk */
+.video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 60px rgba(0,0,0,.45)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .card.coming .card-cover{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 120% at 30% 20%,#3a1656 0%,#241238 55%,#1a0b2c 100%);position:relative;overflow:hidden}
 .card.coming .card-cover::before{content:"";position:absolute;width:180%;height:60px;top:38%;left:-40%;background:linear-gradient(90deg,transparent,rgba(242,182,78,.35),transparent);transform:rotate(-14deg);animation:shine 4.5s ease-in-out infinite}
 @keyframes shine{0%,100%{opacity:.25}50%{opacity:.9}}
@@ -119,6 +128,7 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
     <a class="logo" href="#top">VELA BAY</a>
     <div class="nav-links">
       <a href="#muzyka" data-i18n="nav_music">Muzyka</a>
+      <a href="#teledysk" data-i18n="nav_video">Teledysk</a>
       <a href="#o-projekcie" data-i18n="nav_about">O projekcie</a>
       <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
       <div class="lang"><button id="btn-pl" class="on" onclick="setLang('pl')">PL</button><button id="btn-en" onclick="setLang('en')">EN</button></div>
@@ -134,8 +144,8 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
     <h1>VELA BAY</h1>
     <p class="tagline" data-i18n="hero_tag">Sunny funky house prosto z pokładu — kobiecy wokal, balearskie saksofony, slap bass i cztery na cztery, od których pokład sam zaczyna tańczyć.</p>
     <div class="hero-cta">
-      <a class="btn btn-gold" href="#muzyka" data-i18n="hero_cta1">Posłuchaj</a>
-      <a class="btn btn-ghost" href="https://www.youtube.com/@velabaymusic" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn btn-gold" href="https://open.spotify.com/track/76WY1DVakyAqFagG13N4W4" target="_blank" rel="noopener" data-i18n="hero_cta1">Posłuchaj na Spotify</a>
+      <a class="btn btn-ghost" href="#teledysk" data-i18n="hero_cta2">Zobacz teledysk</a>
     </div>
   </div>
 </header>
@@ -151,10 +161,15 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
           <button class="play-btn" data-src="assets/preview_noc.mp3" aria-label="Posłuchaj zajawki: Noc na jachcie">▶</button>
         </div>
         <div class="card-body">
-          <div class="date" data-i18n="s1_date">Premiera 24.07.2026</div>
+          <div class="date" data-i18n="s1_date">Już gra · premiera 24.07.2026</div>
           <h3>Noc na jachcie</h3>
           <p data-i18n="s1_desc">Debiutancki singiel. Noc, pokład i groove, który nie pyta o zgodę.</p>
-          <span class="badge" data-i18n="s1_badge">Wkrótce na Spotify · Apple Music · YouTube</span>
+          <span class="badge live" data-i18n="s1_badge">Dostępny na wszystkich platformach</span>
+          <div class="card-links">
+            <a class="primary" href="https://open.spotify.com/track/76WY1DVakyAqFagG13N4W4" target="_blank" rel="noopener" data-i18n="s1_l1">Spotify</a>
+            <a href="https://youtu.be/MgOdc9a3Hr4" target="_blank" rel="noopener" data-i18n="s1_l2">Teledysk</a>
+            <a href="https://distrokid.com/hyperfollow/velabay/noc-na-jachcie" target="_blank" rel="noopener" data-i18n="s1_l3">Pozostałe platformy</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -164,10 +179,14 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
           <button class="play-btn" data-src="assets/preview_yacht.mp3" aria-label="Posłuchaj zajawki: Yacht Nights">▶</button>
         </div>
         <div class="card-body">
-          <div class="date" data-i18n="s2_date">Premiera 31.07.2026</div>
+          <div class="date" data-i18n="s2_date">Premiera 31.07.2026 · piątek 20:00</div>
           <h3>Yacht Nights</h3>
           <p data-i18n="s2_desc">Anglojęzyczny bliźniak nocy na pokładzie — balearskie saksofony na pełnym morzu.</p>
-          <span class="badge" data-i18n="s2_badge">Wkrótce na Spotify · Apple Music · YouTube</span>
+          <span class="badge" data-i18n="s2_badge">Singiel i teledysk tego samego wieczoru</span>
+          <div class="card-links">
+            <a class="primary" href="https://distrokid.com/hyperfollow/velabay/yacht-nights" target="_blank" rel="noopener" data-i18n="s2_l1">Pre-save</a>
+            <a href="https://youtu.be/jW8kmHF6Vmw" target="_blank" rel="noopener" data-i18n="s2_l2">Premiera na YouTube</a>
+          </div>
         </div>
       </div>
       <div class="card coming">
@@ -183,6 +202,16 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
           <span class="badge" data-i18n="s3_badge">W produkcji</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="teledysk">
+  <div class="wrap">
+    <div class="sec-head"><h2 data-i18n="video_h">Teledysk</h2></div>
+    <p style="color:var(--ink-dim);margin:-10px 0 22px;font-size:.95rem" data-i18n="video_p">„Noc na jachcie" — teledysk oficjalny. Kadry rysowane jeden po drugim, animowane osobno i cięte do bitu.</p>
+    <div class="video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/MgOdc9a3Hr4" title="Vela Bay – Noc na jachcie (Night on the Yacht) | Official Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -238,13 +267,17 @@ footer{border-top:1px solid rgba(242,182,78,.12);padding:30px 0 40px;font-size:.
 <script>
 const T = {
   en: {
-    nav_music:"Music", nav_about:"About", nav_contact:"Contact",
+    nav_music:"Music", nav_video:"Video", nav_about:"About", nav_contact:"Contact",
     hero_eyebrow:"Funky house · disco house · balearic",
     hero_tag:"Sunny funky house straight from the deck — female vocals, Balearic saxophones, slap bass and a four-on-the-floor pulse that makes the deck dance by itself.",
-    hero_cta1:"Listen",
+    hero_cta1:"Listen on Spotify", hero_cta2:"Watch the video",
     music_h:"Music",
-    s1_date:"Out 24 July 2026", s1_desc:"Debut single (Polish). Night, deck and a groove that doesn't ask permission.", s1_badge:"Soon on Spotify · Apple Music · YouTube",
-    s2_date:"Out 31 July 2026", s2_desc:"The English twin of a night on deck — Balearic saxophones on the open sea.", s2_badge:"Soon on Spotify · Apple Music · YouTube",
+    s1_date:"Out now · released 24 July 2026", s1_desc:"Debut single (Polish). Night, deck and a groove that doesn't ask permission.", s1_badge:"Available on every platform",
+    s1_l1:"Spotify", s1_l2:"Official video", s1_l3:"All platforms",
+    s2_date:"Out 31 July 2026 · Friday 8 PM", s2_desc:"The English twin of a night on deck — Balearic saxophones on the open sea.", s2_badge:"Single and official video the same evening",
+    s2_l1:"Pre-save", s2_l2:"Premiere on YouTube",
+    video_h:"Official video",
+    video_p:"„Noc na jachcie" — official video. Every frame drawn one by one, animated separately and cut to the beat.",
     s3_date:"August 2026", s3_title:"Single #3", s3_desc:"The queen is stepping on deck. The whole yacht knows.", s3_badge:"In production",
     preview_note:"25s preview", preview_note3:"First 20s teaser",
     about_h:"About",
@@ -257,13 +290,17 @@ const T = {
     foot_note:"Sunny funky house straight from the deck ☀️🌊"
   },
   pl: {
-    nav_music:"Muzyka", nav_about:"O projekcie", nav_contact:"Kontakt",
+    nav_music:"Muzyka", nav_video:"Teledysk", nav_about:"O projekcie", nav_contact:"Kontakt",
     hero_eyebrow:"Funky house · disco house · balearic",
     hero_tag:"Sunny funky house prosto z pokładu — kobiecy wokal, balearskie saksofony, slap bass i cztery na cztery, od których pokład sam zaczyna tańczyć.",
-    hero_cta1:"Posłuchaj",
+    hero_cta1:"Posłuchaj na Spotify", hero_cta2:"Zobacz teledysk",
     music_h:"Muzyka",
-    s1_date:"Premiera 24.07.2026", s1_desc:"Debiutancki singiel. Noc, pokład i groove, który nie pyta o zgodę.", s1_badge:"Wkrótce na Spotify · Apple Music · YouTube",
-    s2_date:"Premiera 31.07.2026", s2_desc:"Anglojęzyczny bliźniak nocy na pokładzie — balearskie saksofony na pełnym morzu.", s2_badge:"Wkrótce na Spotify · Apple Music · YouTube",
+    s1_date:"Już gra · premiera 24.07.2026", s1_desc:"Debiutancki singiel. Noc, pokład i groove, który nie pyta o zgodę.", s1_badge:"Dostępny na wszystkich platformach",
+    s1_l1:"Spotify", s1_l2:"Teledysk", s1_l3:"Pozostałe platformy",
+    s2_date:"Premiera 31.07.2026 · piątek 20:00", s2_desc:"Anglojęzyczny bliźniak nocy na pokładzie — balearskie saksofony na pełnym morzu.", s2_badge:"Singiel i teledysk tego samego wieczoru",
+    s2_l1:"Pre-save", s2_l2:"Premiera na YouTube",
+    video_h:"Teledysk",
+    video_p:"„Noc na jachcie" — teledysk oficjalny. Kadry rysowane jeden po drugim, animowane osobno i cięte do bitu.",
     s3_date:"Sierpień 2026", s3_title:"Singiel #3", s3_desc:"Królowa już wchodzi na pokład. Cały jacht to wie.", s3_badge:"W produkcji",
     preview_note:"Zajawka 25 s", preview_note3:"Pierwsza zajawka 20 s",
     about_h:"O projekcie",
