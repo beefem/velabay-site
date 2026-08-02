@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vela Bay — posłuchaj i obserwuj</title>
+<meta name="description" content="Vela Bay — sunny funky house. Posłuchaj „Yacht Nights” i „Nocy na jachcie” na Spotify, YouTube, Apple Music i SoundCloud. Obserwuj, żeby nie przegapić kolejnych wydań.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://velabay.pl/sluchaj/">
+<meta property="og:type" content="music.musician">
+<meta property="og:site_name" content="Vela Bay Music">
+<meta property="og:title" content="Vela Bay — posłuchaj i obserwuj">
+<meta property="og:description" content="Sunny funky house prosto z pokładu. Wszystkie serwisy w jednym miejscu.">
+<meta property="og:image" content="https://velabay.pl/assets/og_1200x630.jpg">
+<meta property="og:url" content="https://velabay.pl/sluchaj/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#140820; --panel:#241238;
+  --fuchsia:#e5308f; --coral:#ff6b4a; --gold:#f2b64e; --gold-light:#ffd98a;
+  --ink:#f6eefc; --ink-dim:#c4b3d6; --line:rgba(242,182,78,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;
+     line-height:1.55;min-height:100vh;display:flex;flex-direction:column;align-items:center;
+     padding:28px 20px 40px;
+     background-image:radial-gradient(circle at 50% -10%,rgba(229,48,143,.22),transparent 60%)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:440px}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;letter-spacing:.38em;
+      color:var(--gold);text-align:center;margin-bottom:26px}
+.cover{width:150px;height:150px;border-radius:16px;margin:0 auto 20px;object-fit:cover;
+       box-shadow:0 14px 44px rgba(0,0,0,.55)}
+h1{font-family:'Playfair Display',serif;font-weight:700;font-size:1.65rem;letter-spacing:.04em;
+   text-align:center;margin-bottom:6px}
+.sub{text-align:center;color:var(--ink-dim);font-size:.92rem;margin-bottom:26px}
+.sub b{color:var(--gold-light);font-weight:600}
+
+.primary{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--coral) 100%);color:#2a1505;
+  font-weight:600;font-size:1.02rem;letter-spacing:.02em;padding:17px 20px;border-radius:14px;
+  box-shadow:0 8px 26px rgba(242,182,78,.28);transition:transform .15s,box-shadow .15s}
+.primary:active{transform:translateY(1px)}
+.primary-note{text-align:center;color:var(--ink-dim);font-size:.8rem;margin:9px 0 26px}
+
+.label{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-light);margin:0 0 12px;text-align:center}
+.list{display:flex;flex-direction:column;gap:9px}
+.row{display:flex;align-items:center;gap:13px;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;padding:13px 16px;font-weight:500;font-size:.95rem;transition:border-color .18s,background .18s}
+.row:hover{border-color:var(--gold);background:#2c1644}
+.row .ico{width:22px;text-align:center;font-size:1.05rem}
+.row .go{margin-left:auto;color:var(--ink-dim);font-size:.85rem}
+.new{font-size:.68rem;font-weight:700;letter-spacing:.1em;background:var(--fuchsia);color:#fff;
+  border-radius:99px;padding:2px 8px;margin-left:8px}
+.sep{height:26px}
+.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:26px;
+  font-size:.83rem;color:var(--ink-dim)}
+.socials a:hover{color:var(--gold-light)}
+footer{margin-top:30px;text-align:center;color:var(--ink-dim);font-size:.76rem;line-height:1.7}
+footer a{color:var(--gold-light)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="logo">VELA&nbsp;BAY</div>
+
+  <img class="cover" src="../assets/cover_yacht_800.jpg" alt="Yacht Nights — okładka" loading="eager"
+       width="150" height="150" onerror="this.style.display='none'">
+
+  <h1>Posłuchaj Vela Bay</h1>
+  <p class="sub">Sunny funky house prosto z pokładu.<br>Najnowszy singiel: <b>Yacht Nights</b></p>
+
+  <a class="primary" id="cta-follow" href="https://open.spotify.com/artist/2Oolpac5pOXLB8v5lnXJ5j"
+     target="_blank" rel="noopener">⚓ Obserwuj na Spotify</a>
+  <p class="primary-note">Jedno kliknięcie „Obserwuj" i nowe kawałki znajdą Cię same.</p>
+
+  <p class="label">Włącz teraz</p>
+  <div class="list">
+    <a class="row" data-gc="yn-spotify" href="https://open.spotify.com/album/5dCJRiNuMHOT625XGyUraN?utm_source=velabay_pl" target="_blank" rel="noopener">
+      <span class="ico">▶</span> Yacht Nights <span class="new">NOWOŚĆ</span> <span class="go">Spotify →</span></a>
+    <a class="row" data-gc="yn-inne" href="https://distrokid.com/hyperfollow/velabay/yacht-nights?utm_source=velabay_pl&utm_medium=sluchaj&utm_campaign=yn" target="_blank" rel="noopener">
+      <span class="ico">↗</span> Yacht Nights <span class="go">Apple, Deezer, Tidal… →</span></a>
+    <a class="row" data-gc="noc-spotify" href="https://open.spotify.com/track/76WY1DVakyAqFagG13N4W4?utm_source=velabay_pl" target="_blank" rel="noopener">
+      <span class="ico">♫</span> Noc na jachcie <span class="go">Spotify →</span></a>
+  </div>
+
+  <div class="sep"></div>
+
+  <p class="label">Gdzie jeszcze</p>
+  <div class="list">
+    <a class="row" data-gc="youtube" href="https://www.youtube.com/@velabaymusic" target="_blank" rel="noopener">
+      <span class="ico">▶</span> YouTube <span class="go">teledyski i kulisy →</span></a>
+    <a class="row" data-gc="soundcloud" href="https://soundcloud.com/velabaymusic" target="_blank" rel="noopener">
+      <span class="ico">☁</span> SoundCloud <span class="go">wersje klubowe →</span></a>
+    <a class="row" data-gc="bandcamp" href="https://velabay.bandcamp.com" target="_blank" rel="noopener">
+      <span class="ico">◈</span> Bandcamp <span class="go">kup / pobierz →</span></a>
+  </div>
+
+  <div class="socials">
+    <a data-gc="ig" href="https://www.instagram.com/velabay.music/" target="_blank" rel="noopener">Instagram</a>
+    <a data-gc="tiktok" href="https://www.tiktok.com/@velabay.music" target="_blank" rel="noopener">TikTok</a>
+    <a data-gc="fb" href="https://www.facebook.com/1233344173186973" target="_blank" rel="noopener">Facebook</a>
+    <a data-gc="x" href="https://x.com/velabaymusic" target="_blank" rel="noopener">X</a>
+  </div>
+
+  <footer>
+    <a href="/">velabay.pl</a> · Muzykę tworzymy z AI, teksty i kierunek są nasze.<br>
+    <span style="opacity:.7">EN: Sunny funky house. New single „Yacht Nights" out now.</span>
+  </footer>
+
+</div>
+
+<script data-goatcounter="https://velabay.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+/* Każdy przycisk wysyła własne zdarzenie — bez tego mierzymy wejścia,
+   ale nie mierzymy kroku „landing → serwis", a to na nim zapada decyzja
+   o skalowaniu kampanii. Bez piksela Meta i bez ciasteczek. */
+(function(){
+  function gc(name, title){
+    if (window.goatcounter && goatcounter.count) {
+      goatcounter.count({path: name, title: title, event: true});
+    }
+  }
+  var sent = {};
+  function hook(el, key, title){
+    el.addEventListener('click', function(){
+      if (sent[key]) return;
+      sent[key] = 1;
+      gc('sluchaj-' + key, title);
+    });
+  }
+  var f = document.getElementById('cta-follow');
+  if (f) hook(f, 'follow-spotify', 'Sluchaj: obserwuj na Spotify');
+  document.querySelectorAll('[data-gc]').forEach(function(el){
+    var k = el.getAttribute('data-gc');
+    hook(el, k, 'Sluchaj: ' + k);
+  });
+})();
+</script>
+</body>
+</html>
